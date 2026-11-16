@@ -1,9 +1,9 @@
 import { Router } from "express"
+import authRoutes from "../modules/auth/auth.routes.js"
 
-export const apiRouter = Router()
+const apiRouter = Router()
 
-// Authentication routes
-// apiRouter.use("/auth", authRouter)
+apiRouter.use("/auth", authRoutes)
 
 // User routes
 // apiRouter.use("/users", userRouter)
@@ -19,3 +19,5 @@ export const apiRouter = Router()
 
 // Documentation page routes
 // apiRouter.use("/pages", pageRouter)
+
+export default apiRouter
